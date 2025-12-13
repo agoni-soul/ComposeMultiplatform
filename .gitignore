@@ -1,15 +1,25 @@
-*.iml
+.externalNativeBuild
+.cxx
+# 构建系统生成的目录
 .gradle
-/local.properties
+.gradle/
+build/
+androidApp/build/
+shared/build/
+/build
+/captures
+
+# Android Studio 的本地配置文件
+.idea/
+*.iml
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
 local.properties
+/local.properties
+
+# 系统文件 (可选，但推荐)
+.DS_Store
