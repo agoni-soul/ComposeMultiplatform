@@ -36,24 +36,24 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 
-    plugins {
-        val kotlinVersion = "1.9.21"
-        kotlin("jvm").version(kotlinVersion)
-        kotlin("multiplatform").version(kotlinVersion)
-        kotlin("android").version(kotlinVersion)
-
-        val agpVersion= "8.0.2"
-        id("com.android.application").version(agpVersion)
-        id("com.android.library").version(agpVersion)
-
-        val composeVersion = "1.5.11"
-        id("org.jetbrains.compose").version(composeVersion)
-
-    }
+//    plugins {
+//        val kotlinVersion = "1.9.21"
+//        kotlin("jvm").version(kotlinVersion)
+//        kotlin("multiplatform").version(kotlinVersion)
+//        kotlin("android").version(kotlinVersion)
+//
+//        val agpVersion= "8.0.2"
+//        id("com.android.application").version(agpVersion)
+//        id("com.android.library").version(agpVersion)
+//
+//        val composeVersion = "1.5.11"
+//        id("org.jetbrains.compose").version(composeVersion)
+//
+//    }
 }
 
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version("0.4.0")
+    id("org.gradle.toolchains.foojay-resolver-convention") version("0.10.0")
 }
 
 dependencyResolutionManagement {

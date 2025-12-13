@@ -4,9 +4,9 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     // 必须添加点
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.androidLibrary)
 }
 
 kotlin {
@@ -24,13 +24,13 @@ kotlin {
 //        val desktopMain by getting
 
         commonMain.dependencies {
-//            implementation(compose.runtime)
-//            implementation(compose.foundation)
-//            implementation(compose.material3)
-//            implementation(compose.materialIconsExtended)
-//            implementation(compose.ui)
-//            implementation(compose.components.resources)
-//            implementation(compose.components.uiToolingPreview)
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
 //
 //            implementation(libs.navigation.compose)
 //
@@ -56,7 +56,7 @@ kotlin {
         }
 
         androidMain.dependencies {
-//            implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.activity.compose)
 //            implementation(libs.ktor.client.okhttp)
 //            implementation(libs.compose.ui.tooling.preview)
 //            implementation(libs.coil.network.okhttp)
