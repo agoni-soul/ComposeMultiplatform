@@ -42,15 +42,6 @@ android {
     }
 }
 
-dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-}
-
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -60,13 +51,9 @@ kotlin {
     }
 
     sourceSets {
-
         androidMain.dependencies {
             implementation(project(":shared"))
             implementation(libs.androidx.activity.compose)
-//            implementation(libs.ktor.client.okhttp)
-//            implementation(libs.compose.ui.tooling.preview)
-//            implementation(libs.coil.network.okhttp)
         }
     }
 }

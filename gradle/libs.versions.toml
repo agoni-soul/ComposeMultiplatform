@@ -22,6 +22,7 @@ material = "1.10.0"
 jetbrainsKotlinJvm = "2.0.21"
 runtime = "1.10.0"
 material3 = "1.4.0"
+foojayResolverConvention = "0.10.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,4 +44,5 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+foojayResolverConvention = { id = "org.gradle.toolchains.foojay-resolver-convention", version.ref = "foojayResolverConvention"}
 
