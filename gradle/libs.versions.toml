@@ -23,20 +23,41 @@ jetbrainsKotlinJvm = "2.0.21"
 runtime = "1.10.0"
 material3 = "1.4.0"
 foojayResolverConvention = "0.10.0"
+uiToolingPreview = "1.10.0"
+uiTooling = "1.10.0"
+uiText = "1.10.0"
+animationCore = "1.10.0"
+foundation = "1.10.0"
+ui = "1.10.0"
+adsMobileSdk = "0.22.0-beta04"
 
 [libraries]
+compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "composeMultiplatform"}
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeMultiplatform"}
+#compose-ui-layout = { group = "androidx.compose.ui", name = "ui-layout", version.ref = "composeMultiplatform"}
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeMultiplatform"}
+compose-animation-graphics = { group = "androidx.compose.animation", name = "animation-graphics", version.ref = "composeMultiplatform"}
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+#androidx
 androidx-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "runtime" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "uiToolingPreview" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
+androidx-ui-text = { group = "androidx.compose.ui", name = "ui-text", version.ref = "uiText" }
+androidx-animation-core = { group = "androidx.compose.animation", name = "animation-core", version.ref = "animationCore" }
+androidx-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "ui" }
+ads-mobile-sdk = { group = "com.google.android.libraries.ads.mobile.sdk", name = "ads-mobile-sdk", version.ref = "adsMobileSdk" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

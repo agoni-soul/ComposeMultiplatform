@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 
 /**
- * @auther: soulagoni
+ * @auther: haha
  * @Date:   2025/12/13
  * @Detail:
  */

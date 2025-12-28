@@ -22,17 +22,28 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            // Compose Multiplatform 依赖
             implementation(compose.runtime)
             implementation(compose.foundation)
+            // 如果你想要使用Material Design
             implementation(compose.material3)
             implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(compose.components.resources)
+            implementation(libs.compose.animation.graphics)
+            // 预览工具依赖
+            implementation(compose.uiTooling)
             implementation(compose.components.uiToolingPreview)
         }
 
         androidMain.dependencies {
-            implementation(libs.androidx.activity.compose)
+            // Android 特定依赖
+            implementation(libs.compose.ui.tooling)
+            implementation(libs.compose.ui.tooling.preview)
+
+            // 如果是应用模块，添加这些
+            implementation(libs.compose.ui)
+            implementation(libs.androidx.material3)
         }
     }
 }
@@ -43,7 +54,7 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
-        targetSdk = libs.versions.android.targetSdk.get().toInt()
+        testOptions.targetSdk = libs.versions.android.targetSdk.get().toInt()
     }
 
     buildTypes {
@@ -55,6 +66,15 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.composeMultiplatform.get()
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -65,6 +85,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.androidx.activity.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
